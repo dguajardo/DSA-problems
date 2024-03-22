@@ -1,0 +1,6 @@
+{
+    "devDependencies": {
+        "test": "jest",
+        "jest": "^29.7.0"
+    }
+}
