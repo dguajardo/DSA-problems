@@ -4,7 +4,7 @@ function twoSum_(array, target) {
     let right = sortedArray.length - 1;
     while (left < right) {
         const currentSum = sortedArray[left] + sortedArray[right];
-        if (currentSum == target) {
+        if (currentSum === target) {
             return [sortedArray[left], sortedArray[right]];
         } else if (currentSum < target) {
             left++;
