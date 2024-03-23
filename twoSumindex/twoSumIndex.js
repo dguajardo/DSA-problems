@@ -28,23 +28,26 @@ const twoSumIndexOn = function(array, target) {
     return [];
 };
 
-const twoSumIndex_ = function(array, target) {
-    const sortedArray = array.slice(0).sort((a, b) => a - b);
+const twoSumIndex_ = function(nums, target) {
+    const numObjects = nums.map((num, index) => ({ num, index }));
+
+    numObjects.sort((a, b) => a.num - b.num);
+
     let left = 0;
-    let right = sortedArray.length - 1;
+    let right = numObjects.length - 1;
+
     while (left < right) {
-        const currentSum = sortedArray[left] + sortedArray[right];
-        if (currentSum === target) {
-            return [
-                array.indexOf(sortedArray[left]),
-                array.indexOf(sortedArray[right]),
-            ];
-        } else if (currentSum < target) {
+        const sum = numObjects[left].num + numObjects[right].num;
+
+        if (sum === target) {
+            return [numObjects[left].index, numObjects[right].index];
+        } else if (sum < target) {
             left++;
-        } else if (currentSum > target) {
+        } else {
             right--;
         }
     }
+
     return [];
 };
 

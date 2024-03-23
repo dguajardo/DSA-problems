@@ -47,8 +47,8 @@
         "target": 164,
         "expectedOutput": []
     }, {
-        "input": [3, 5, -4, 8, 11, 1, -1, 6],
-        "target": 15,
-        "expectedOutput": []
+        "input": [3, 3],
+        "target": 6,
+        "expectedOutput": [0, 1]
     }
 ]
