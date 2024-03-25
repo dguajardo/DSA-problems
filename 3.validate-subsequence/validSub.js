@@ -28,7 +28,9 @@ const isValidSequenceOn_ = function(array, sequence) {
 }
 
 // Do not edit the line below.
-exports.isValidSubsequence = isValidSubsequence;
 
-
-module.exports = { isValidSubsequenceOlogn, isValidSubsequenceOn };
+module.exports = {
+    isValidSubsequenceOlogn,
+    isValidSubsequenceOn,
+    isValidSequenceOn_,
+};
